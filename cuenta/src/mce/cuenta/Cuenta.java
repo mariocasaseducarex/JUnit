@@ -47,7 +47,7 @@ public class Cuenta {
 	public void ingresar(double cantidad) throws Exception
 	{
 	if (cantidad<0) throw new Exception("No se puede ingresar una cantidad negativa"); 
-	saldo = saldo + cantidad;
+	saldo = saldo + (cantidad * (tipoInteres/100 + 1));
 	}
 
 	/* Método para retirar cantidades en la cuenta. Modifica el saldo.
